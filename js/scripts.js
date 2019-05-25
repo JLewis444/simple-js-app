@@ -21,8 +21,9 @@ var repository = [
 
 
 
-for (var i = 0; i < repository.length; i++) {
-   console.log(repository[i]);
+repository.forEach(function(currentPokemon){
+  document.write(currentPokemon);
+});
     if (repository[i].height > 1.5) {
       document.write ('<p class="top_article">WELL - this is biggest Pokemon</p>');
     }
@@ -44,3 +45,6 @@ for (var i = 0; i < repository.length; i++) {
        }
    
  } 
+
+
+ 
