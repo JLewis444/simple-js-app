@@ -1,28 +1,44 @@
-var repository = [
-    {
-        name : 'Fearow',
-        height : 1.2,
-        types :['grass', 'water']
-    },
+var pokemonRepository = (function () {
+    var repository = [
+        {
+            name : 'Fearow',
+            height : 1.2,
+            types :['grass', 'water']
+        },
+    
+       {
+           name : 'Macgoke',
+           height : 1.5,
+           types : ['grass', 'fire']
+       },
+    
+       {
+           name : 'Golduck',
+           height : 1.7,
+           types : ['grass', 'poison']
+       }
+    
+    ];
+        function add(pokemon) {
+            repository.push(pokemon);
+        }
 
-   {
-       name : 'Macgoke',
-       height : 1.5,
-       types : ['grass', 'fire']
-   },
+        function getAll() {
+            return repository;
+        }
 
-   {
-       name : 'Golduck',
-       height : 1.7,
-       types : ['grass', 'poison']
-   }
-
-];
+        return {
+            add: add,
+            getAll: getAll
+        };
+    
+})();
+console.log(pokemonRepository.getAll());
 
 
-repository.forEach(function(currentPokemon){
-    document.write('<h2 style="color:skyblue">' + currentPokemon.name + '</h2>');
-  document.write(currentPokemon.name + ' ' + currentPokemon.height);
+pokemonRepository.getAll().forEach(function(currentPokemon){
+    document.write('<h2 style="color:skyblue">' + currentPokemon.name + ' ' + currentPokemon.height + '</h2>');
+  document.write(currentPokemon.types);
 
 });
 
