@@ -9,31 +9,18 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <div class="outterWrap">
-      <header>
-        <h1>Pókedex</h1>
-        <div class="itemWrap">
-          <div class="item">
-            <div class="highlight"></div>
-          </div>
-          <div class="item">
-            <div class="highlight"></div>
-          </div>
-          <div class="item light-on">
-            <div class="highlight"></div>
-          </div>
+    <div>
+      <h1>Pókedex :</h1>
+      <ul>
+        <div id = "modal-container">
+          <script src="js/promise-polyfill.js"></script>
+          <script src="js/fetch-polyfill.js"></script>
+          <script src="dist/js/scripts.js"></script>
         </div>
-      </header>
-      <main>
-        <div class="leftSide main-left">
-          <ul id="pokemon-list"></ul>
-        </div>
-        <div class="rightSide main-right"></div>
-      </main>
-  
+      </ul>
     </div>
 
-    
+  </body>  
   <footer>
     <div class="footer-text">
       <p>Find more projects on:</p>
