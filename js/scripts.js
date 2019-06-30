@@ -165,8 +165,9 @@ pokemonRepository.loadList().then(function() {
 });
 
 function showDetails(pokemonObject) {
-    var requestUrl = getAll()[item].detailsUrl;
-    makeRequest(requestUrl, createModalWithDetails);
+    pokemonRepository.loadDetails(pokemonObject).then(function() {
+        showModal(pokemonObject);
+    });
     }
 
 
